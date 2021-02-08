@@ -5,6 +5,18 @@ export class HackerNewsAPI extends RESTDataSource {
     super();
     this.baseURL = "https://hacker-news.firebaseio.com/v0/";
   }
+
+  articleReducer({ id, by, url, time, title } = {}) {
+    return {
+      id: `hn-${id}`,
+      title,
+      author: by,
+      url,
+      time,
+      source: "HackerNews",
+    };
+  }
+
   async getAllArticleIds() {
     const result = await this.get("topstories.json");
     return result;
