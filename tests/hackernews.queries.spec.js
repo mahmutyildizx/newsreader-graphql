@@ -73,6 +73,7 @@ describe("[Queries.HackerNewsAPI]", () => {
 
     expect(res).toMatchSnapshot();
   });
+
   it("fetches an array of articles from the HackerNews API", async () => {
     const { server, hackernewsAPI } = constructTestServer();
 
