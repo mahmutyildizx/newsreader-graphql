@@ -14,7 +14,7 @@ export class NewYorkTimesAPI extends RESTDataSource {
 
   async getAllArticles() {
     const result = await this.get(
-      "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=Jg1WQqSCu08PZKrQyqPGNN7F7FCYVnxp"
+      "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=h8owE2h6oFjwTPg7b0g1cB75L1mcQ9NE"
     );
     return result?.results?.map((article) => this.articleReducer(article));
   }
